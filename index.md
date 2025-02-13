@@ -1,27 +1,31 @@
-## News just in!
+## Breaking News!
 
-New Deepseek <span class="fragment highlight-red">model</span> is <span class="fragment highlight-red">trained</span> on openAI <span class="fragment highlight-red">data</span> and has <span class="fragment highlight-red">1.5 billion parameters</span>!
+New AI <span data-fragment-index="1" class="fragment highlight-red">model</span>
+Deepseek<span data-fragment-index="2" class="fragment highlight-red">-r1</span>
+was <span data-fragment-index="3" class="fragment highlight-red">trained</span>
+on openAI <span data-fragment-index="4" class="fragment highlight-red">data</span>
+and has <span data-fragment-index="6" class="fragment highlight-red">only</span>
+<span data-fragment-index="5" class="fragment highlight-red">1.5 billion parameters</span>!
 
 ---
 ## In this talk
-
-<p class="fragment fade-out">Transformer Architecture (LLMs)</p>
-<p class="fragment fade-out">Diffusion models</p>
-<p class="fragment fade-out">Convolutional Neural Networks (CNNs)</p>
+<p class="fragment fade-in-then-out">Reasoning models (LLMs that have a 'thinking' stage)</p>
+<p class="fragment fade-in-then-out">Transformer models ('Vanilla' LLMs)</p>
+<p class="fragment fade-in-then-out">Diffusion models (generating images from noise)</p>
+<p class="fragment fade-in-then-out">Convolutional Neural Networks (CNNs)</p>
 
 <div class="fragment" style="position: absolute; top: 60px">
     <p>Multilayer Perceptrons (MLP)</p>
     <img src="/img/MLP.png" height="700" width="1200" />
 </div>
 
-
 ---
 ## Disclaimer
 
-We don't really need to understand this stuff
-
-We just call OpenAI's API for our features at BaseKit
-
+<ul>
+    <li>We don't really need to understand this stuff</li>
+    <li>This is a heavily simplified explaination</li>
+</ul>
 <img src="/img/how_to_talk_to_women.png" height="700" width="1200" />
 
 ---
@@ -31,74 +35,63 @@ I want to predict if someone is going to be happy
 
 <img src="/img/happy_or_not.png" height="700" width="700" />
 
-
 ---
-## Solution Part 1: Perceptron
+## Perceptron
 
 <img src="/img/perceptron.png" />
 
 ---
-## Solution Part 1: Perceptron
+## Perceptron
 
-How happy (`y`) is someone likely to be?
+<img src="/img/formal_perceptron.png" />
 
-<img src="/img/perceptron_edited.png" />
-
----
-## Solution Part 1: Our Happyness Example
-
-image of perceptron with our happiness inputs
+[McCulloch & Pitts, 1943](https://www.cse.chalmers.se/~coquand/AUTOMATA/mcp.pdf)
 
 ---
+## Perceptron
 
-### Examples:
-
-- **Does someone own a house?**
-  - 'What is their salary?'
-  - 'What is their age?'
-  - 'Where do they live?'
-
-- **Is it going to rain?**
-  - 'Humidity?'
-  - 'Time of year?'
-  - 'Temperature?'
-  - 'Geographical location?'
-
-- Other examples: 'Is someone going to be tall?', 'Will my team win the next World Cup?', 'Are people going to understand this talk?'
+<img src="/img/modern_perceptron.png" />
 
 ---
-## Solution Part 2: Multi-Layer Perceptron
+## Multilayer Perceptron (MLP)
 
-- Multi-layer example:
-  - **Is someone going to be happy?**
-  - Could take the previous weather and house perceptrons and use those to predict the answer.
-- Now we take loads of these and tie them together.
-- Give a new, more complex example.
-- Show how each neuron/perceptron contributes.
+<img src="/img/excallidraw_mlp.png" />
 
 ---
-## Model Training
+## Model Training data
 
-- We have been manually adjusting the weights of each input to get good results.
-- If we knew the desired result, we could use **backpropagation** (a form of training).
-- We know if a person is happy, so we can take their inputs and adjust the weights and biases to give the correct result.
-  - Start with random weights and biases.
-  - Uses the magic of 'math' aka backpropagation.
-  - Propagating backwards in a network and adjusting the weights and biases to move closer to the desired output.
+```csv
+name, age, step count, ..., happiness
+Alice, 25, 7000, ..., 0.8
+Bob, 34, 12000, ..., 0.9
+Charlie, 29, 5000, ..., 0.6
+David, 40, 8000, ..., 0.7
+Emma, 22, 15000, ..., 0.95
+...
+
+```
+
+### Backpropagation Algorithm
+
+- Initialise all weights to random
+- Feed in Alice
+- If the output is too low, adjust weights the smallest amount you can to move the result up (visa versa)
+- Repeat with entire training data set
 
 ---
 ## Timeline
 
 - **1943** – [McCulloch & Pitts proposed the first artificial neuron](https://www.cse.chalmers.se/~coquand/AUTOMATA/mcp.pdf)
-- **1957** – [Rosenblatt introduced the Perceptron, a single-layer model](https://bpb-us-e2.wpmucdn.com/websites.umass.edu/dist/a/27637/files/2016/03/rosenblatt-1957.pdf)
+- **1957** – [The Perceptron, a single-layer model](https://bpb-us-e2.wpmucdn.com/websites.umass.edu/dist/a/27637/files/2016/03/rosenblatt-1957.pdf)
 - **1960s** – Early versions of MLPs were explored, but training was difficult.
-- **1986** – [Rumelhart, Hinton, and Williams popularized backpropagation, making MLPs effective for learning](https://www.nature.com/articles/323533a0)
+- **1986** – [Rumelhart, Hinton, and Williams popularized backpropagation training](https://www.nature.com/articles/323533a0)
 - **...**
-- **2023** – ["Attention is All You Need" by Google](https://arxiv.org/abs/1706.03762), originally for translating text
+- **2017-2023** – ['Attention is All You Need' by a Google team](https://arxiv.org/abs/1706.03762), originally for translating text
+- **2018** - [Initial GPT paper by OpenAI](https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf)
 
 ---
-## Fast Forward: How do LLMs work?
+## Fast Forward: LLMs
 
-- **High-level overview:**
-  - Takes **n** input tokens.
-  - Instead of a number response, they predict the next most likely token
+- Takes **n** input 'tokens' (like 'words')
+- Ends up in an 'Embedding space'
+- Tokens near that destination are the 'most likely' next token
