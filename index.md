@@ -86,7 +86,8 @@ Emma, 22, 15000, ..., 0.95
 - **1960s** – Early versions of MLPs were explored, but training was difficult.
 - **1986** – [Rumelhart, Hinton, and Williams popularized backpropagation training](https://www.nature.com/articles/323533a0)
 - **...**
-- **2017-2023** – ['Attention is All You Need' by a Google team](https://arxiv.org/abs/1706.03762), originally for translating text
+- **2013** – ['Efficient Estimation of Word Representations in Vector Space' by a Google team](https://arxiv.org/abs/1706.03762)
+- **2017** – ['Attention is All You Need' by a Google team](https://arxiv.org/abs/1706.03762)
 - **2018** - [Initial GPT paper by OpenAI](https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf)
 
 ---
