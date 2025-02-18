@@ -53,14 +53,25 @@ I want to predict if someone is going to be happy
 <img src="/img/modern_perceptron.png" />
 
 ---
-## Multilayer Perceptron (MLP)
 
-<img src="/img/excallidraw_mlp.png" />
+<section>
+    <h4>Multilayer Perceptron (MLP)</h4>
+    <img src="/img/excallidraw_mlp.png" />
+</section>
+
+<section>
+    New AI <span data-fragment-index="1" class="fragment highlight-red">model</span>
+    Deepseek<span data-fragment-index="2" class="fragment highlight-red">-r1</span>
+    was <span data-fragment-index="3" class="fragment highlight-red">trained</span>
+    on openAI <span data-fragment-index="4" class="fragment highlight-red">data</span>
+    and has <span data-fragment-index="6" class="fragment highlight-red">only</span>
+    <span data-fragment-index="5" class="fragment highlight-red">1.5 billion parameters</span>!
+</section>
 
 ---
 ## Model Training data
 
-```csv
+```
 name, age, step count, ..., happiness
 Alice, 25, 7000, ..., 0.8
 Bob, 34, 12000, ..., 0.9
@@ -68,15 +79,18 @@ Charlie, 29, 5000, ..., 0.6
 David, 40, 8000, ..., 0.7
 Emma, 22, 15000, ..., 0.95
 ...
+// and many more...
 
 ```
 
 ### Backpropagation Algorithm
 
-- Initialise all weights to random
-- Feed in Alice
-- If the output is too low, adjust weights the smallest amount you can to move the result up (visa versa)
-- Repeat with entire training data set
+```txt
+1. Initialise all weights to random
+2. Feed in Alice (called 'Feed Forward')
+3. Adjust weights to improve result
+4. Repeat with entire training data set
+```
 
 ---
 ## Timeline
@@ -91,8 +105,59 @@ Emma, 22, 15000, ..., 0.95
 - **2018** - [Initial GPT paper by OpenAI](https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf)
 
 ---
-## Fast Forward: LLMs
+## LLMs; What do they do?
 
-- Takes **n** input 'tokens' (like 'words')
-- Ends up in an 'Embedding space'
-- Tokens near that destination are the 'most likely' next token
+<div style="position: relative; height: 2em;">
+  <div class="fragment fade-out" style="position: absolute; width: 100%;">Once upon a...</div>
+  <div class="fragment fade-in-then-out" style="position: absolute; width: 100%;">Once upon a time...</div>
+  <div class="fragment fade-in-then-out" style="position: absolute; width: 100%;">Once upon a time there...</div>
+  <div class="fragment fade-in-then-out" style="position: absolute; width: 100%;">Once upon a time there lived...</div>
+  <div class="fragment fade-in-then-out" style="position: absolute; width: 100%;">Once upon a time there lived a...</div>
+</div>
+
+<img src="/img/llm_input_example.png" />
+
+---
+
+```txt
+System: You are a helpful AI that answers user questions
+User question: What is the best way to cook an egg?
+System: ...
+```
+
+<img src="/img/llm_input_example_2.png" />
+
+---
+
+<img src="/img/transformer_architecture.png" />
+
+---
+
+<img src="/img/llm_diagram_simple.png" />
+
+---
+## Feed Forward
+
+<img src="/img/excallidraw_mlp.png" />
+
+---
+## Embeddings?
+
+- Introduce concept of embedding space?
+- Takes input, and gives an embedding vector
+- Finds most likely next token by taking the nearest embeddings to that final vector
+
+---
+## Attention?
+
+"She turned on the <span data-fragment-index="1" class="fragment highlight-red">light</span> to brighten the room"
+
+"The bag was surprisingly <span data-fragment-index="2" class="fragment highlight-red">light</span>, so carrying it was easy"
+
+"He tried to keep the conversation <span data-fragment-index="3" class="fragment highlight-red">light</span> to avoid tension"
+
+---
+## End
+
+Summarise?
+
