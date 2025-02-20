@@ -141,11 +141,16 @@ System: ...
 <img src="/img/excallidraw_mlp.png" />
 
 ---
-## Embeddings?
 
-- Introduce concept of embedding space?
-- Takes input, and gives an embedding vector
-- Finds most likely next token by taking the nearest embeddings to that final vector
+<img src="/img/embedding_1.png" />
+
+---
+
+<img src="/img/embedding_2.png" />
+
+---
+
+<img src="/img/embedding_3.png" />
 
 ---
 ## Attention?
