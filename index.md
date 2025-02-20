@@ -150,6 +150,12 @@ System: ...
 
 ---
 
+<img src="/img/embedding_examples.png" />
+
+['Efficient Estimation of Word Representations in Vector Space' by a Google team, 2013](https://arxiv.org/abs/1301.3781)
+
+---
+
 <img src="/img/embedding_3.png" />
 
 ---
