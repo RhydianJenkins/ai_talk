@@ -168,7 +168,21 @@ System: ...
 "He tried to keep the conversation <span data-fragment-index="3" class="fragment highlight-red">light</span> to avoid tension"
 
 ---
+
+<p style="text-align: left">
+    The poker game was tense. Eddie "Ace" Malone laid down four kings, smirking. Vincent Russo’s face darkened. He had lost everything. "You cheated," Vincent growled.
+    Eddie laughed.
+</p>
+<p style="font-style: italic;">
+    10,000 words later...
+</p>
+<p style="text-align: left">
+    A shot rang out. Eddie slumped forward, blood pooling on the table. Don't ever cheat again, said <span class="fragment" style="color: red;">?</span>
+</p>
+
+---
+
 ## End
 
-Summarise?
+New AI model Deepseek-r1 was trained on openAI data and has only 1.5 billion parameters
 
