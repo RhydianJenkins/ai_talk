@@ -4,8 +4,7 @@ New AI <span data-fragment-index="1" class="fragment highlight-red">model</span>
 Deepseek<span data-fragment-index="2" class="fragment highlight-red">-r1</span>
 was <span data-fragment-index="3" class="fragment highlight-red">trained</span>
 on openAI <span data-fragment-index="4" class="fragment highlight-red">data</span>
-and has <span data-fragment-index="6" class="fragment highlight-red">only</span>
-<span data-fragment-index="5" class="fragment highlight-red">1.5 billion parameters</span>!
+and has <span data-fragment-index="5" class="fragment highlight-red">671 billion parameters</span>!
 
 ---
 ## In this talk
@@ -184,5 +183,5 @@ System: ...
 
 ## End
 
-New AI model Deepseek-r1 was trained on openAI data and has only 1.5 billion parameters
+New AI model Deepseek-r1 was trained on openAI data and has 671 billion parameters
 
