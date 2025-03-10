@@ -181,6 +181,31 @@ System: ...
 
 ---
 
+<section>
+    <img src="/img/transformer_architecture.png" />
+</section>
+
+<section>
+    <img src="/img/llm_diagram_simple.png" />
+</section>
+
+<section>
+    <h1>Embedding</h1>
+    <img src="/img/embedding_3.png" />
+</section>
+
+<section>
+    <h1>Attention</h1>
+    "She turned on the <span data-fragment-index="1" class="fragment highlight-red">light</span> to brighten the room"
+</section>
+
+<section>
+    <h1>Feed Forward</h1>
+    <img src="/img/MLP.png" />
+</section>
+
+---
+
 ## End
 
 New AI model Deepseek-r1 was trained on openAI data and has 671 billion parameters
