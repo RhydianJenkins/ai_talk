@@ -158,6 +158,10 @@ System: ...
 <img src="/img/embedding_3.png" />
 
 ---
+
+['OpenAI API reference'](https://platform.openai.com/docs/api-reference/embeddings)
+
+---
 ## Attention?
 
 "She turned on the <span data-fragment-index="1" class="fragment highlight-red">light</span> to brighten the room"
